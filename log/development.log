@@ -833,3 +833,12 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 45ms (Views: 41.1ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/posts/5" for 73.140.242.122 at 2020-01-13 01:48:57 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
