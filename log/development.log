@@ -890,3 +890,12 @@ Redirected to http://178.128.177.30:35216/posts/5
 Completed 302 Found in 74ms (ActiveRecord: 4.5ms)
 
 
+Started GET "/posts/5" for 73.140.242.122 at 2020-01-13 01:50:40 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 81ms (Views: 78.2ms | ActiveRecord: 0.2ms)
+
+
