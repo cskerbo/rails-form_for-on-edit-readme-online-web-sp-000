@@ -869,3 +869,24 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/posts/5/edit" for 73.140.242.122 at 2020-01-13 01:50:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 172ms (Views: 160.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/5" for 73.140.242.122 at 2020-01-13 01:50:39 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GRRWnLXr39grcpB+L/5c78HwAmSnt0TiU6WziJy16XJEJQqRW/f7zQSslOY6na6JSME0LLUz+2xxFLA6sR9joA==", "post"=>{"title"=>"dsdsd", "description"=>"dsdsd"}, "commit"=>"Update Post", "id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "dsdsd"], ["description", "dsdsd"], ["updated_at", "2020-01-13 01:50:39.965314"], ["id", 5]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://178.128.177.30:35216/posts/5
+Completed 302 Found in 74ms (ActiveRecord: 4.5ms)
+
+
